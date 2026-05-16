@@ -16,3 +16,4 @@
   **asimilar  a nuestro proyeto 
 - **Week 9:** Actividad supermercado
 - la q mando el profe
+- **Week 11:** Srs del supermercado de la esquina v2
