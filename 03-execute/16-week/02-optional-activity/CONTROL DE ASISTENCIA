@@ -1,0 +1,69 @@
+ Planteamiento del problema
+Actualmente, el proceso de toma de asistencia de los aprendices se realiza mediante la plataforma SOFIA Plus, donde el instructor debe ingresar al sistema, buscar la ficha correspondiente y verificar uno por uno a cada aprendiz. Este procedimiento resulta lento y poco eficiente porque obliga a revisar el listado completo (asistentes e inasistentes) en lugar de enfocarse solo en las excepciones, además de dificultar el registro de observaciones o soportes documentales de inasistencia.
+
+## Objetivo general
+Desarrollar un sistema web que optimice el proceso de toma de asistencia de los aprendices, reduciendo el tiempo empleado por el instructor mediante el registro exclusivo de las inasistencias.
+
+ Objetivos específico
+- Analizar el proceso actual de toma de asistencia en SOFIA Plus para identificar sus principales dificultades y cuellos de botella.
+- Diseñar una plantilla sencilla que permita al instructor marcar únicamente a los aprendices inasistentes desde una sola pantalla.
+- Implementar un mecanismo para registrar observaciones y adjuntar soportes (excusas médicas, incapacidades, permisos) asociados a cada inasistencia.
+- Almacenar automáticamente la fecha y hora del reporte, así como facilitar su posterior consulta, seguimiento y modificación.
+
+ Ingeniería de requisitos: requerimientos funcionales
+| Código | Descripción |
+|---|---|
+| RF_01 | El sistema debe permitir el ingreso del instructor al módulo de asistencia de la ficha correspondiente. |
+| RF_02 | El sistema debe mostrar una plantilla de asistencia con el listado de aprendices matriculados en la ficha. |
+| RF_03 | La plantilla debe contar con una casilla de selección para registrar a los aprendices inasistentes. |
+| RF_04 | El sistema debe permitir registrar una observación para cada aprendiz inasistente cuando sea necesario. |
+| RF_05 | El sistema debe permitir adjuntar un archivo como soporte de la observación (excusa médica, incapacidad, permiso). |
+| RF_06 | El sistema debe permitir modificar la selección de un aprendiz antes de guardar el reporte. |
+| RF_07 | Al finalizar el llamado a lista, el instructor debe poder guardar el reporte de inasistencias. |
+| RF_08 | El sistema deberá registrar automáticamente la hora y fecha del reporte. |
+| RF_09 | El sistema reportará solo la información de los aprendices inasistentes. |
+| RF_10 | Los aprendices no incluidos en el reporte se marcarán automáticamente como asistentes. |
+| RF_11 | El sistema debe tener un apartado de consulta y seguimiento de aprendices. |
+| RF_12 | El sistema debe permitir modificar observaciones e inasistencias ya registradas. |
+
+ SRS (IEEE 830): estructura sugerida
+                              Instructor
+                                  |
+      -----------------------------------------------------------
+      |           |            |             |
+      V           V            V             V
+   (UC01)      (UC02)       (UC03)        (UC04)
+   Ingresar    Registrar    Consultar y   Modificar
+   al módulo   inasistencias seguimiento   reporte de
+   (RF_01)                   de aprendices inasistencias
+                              (RF_11)      (RF_06, RF_12)
+                  |
+                  | <<include>>
+                  V
+           Mostrar plantilla
+           de asistencia
+           (RF_02)
+                  |
+                  | <<include>>
+                  V
+           Seleccionar aprendices
+           inasistentes
+           (RF_03, RF_09, RF_10)
+                  |
+                  | <<include>>
+                  V
+           Guardar reporte
+           (RF_07, RF_08)
+                  |
+                  | <<extend>>
+                  V
+              (UC05)
+           Registrar observación
+           (RF_04)
+                  |
+                  | <<extend>>
+                  V
+              (UC06)
+           Adjuntar soporte
+           (RF_05)
+
