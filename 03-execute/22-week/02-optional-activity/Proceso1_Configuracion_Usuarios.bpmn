@@ -4,68 +4,135 @@
     <bpmn:participant id="Participant_1" name="SENA — Proceso 1: Configuración inicial de usuarios" processRef="Process_ConfiguracionUsuarios" />
   </bpmn:collaboration>
   <bpmn:process id="Process_ConfiguracionUsuarios" name="Proceso 1 - Configuración inicial de usuarios" isExecutable="false">
-    <bpmn:startEvent id="Start1" name="Solicitud de creación de usuario"><bpmn:outgoing>SF1</bpmn:outgoing></bpmn:startEvent>
-    <bpmn:task id="T1_1" name="Verificar datos del solicitante"><bpmn:incoming>SF1</bpmn:incoming><bpmn:outgoing>SF2</bpmn:outgoing></bpmn:task>
-    <bpmn:exclusiveGateway id="G1_1" name="¿Usuario ya existe en el sistema?"><bpmn:incoming>SF2</bpmn:incoming><bpmn:outgoing>SF3</bpmn:outgoing><bpmn:outgoing>SF5</bpmn:outgoing></bpmn:exclusiveGateway>
-    <bpmn:task id="T1_2" name="Rechazar solicitud (usuario duplicado)"><bpmn:incoming>SF3</bpmn:incoming><bpmn:outgoing>SF4</bpmn:outgoing></bpmn:task>
-    <bpmn:endEvent id="End1_rej" name="Fin — solicitud rechazada"><bpmn:incoming>SF4</bpmn:incoming></bpmn:endEvent>
-    <bpmn:task id="T1_3" name="Crear usuario (instructor / coordinador / aprendiz / director)"><bpmn:incoming>SF5</bpmn:incoming><bpmn:outgoing>SF6</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="T1_4" name="Asignar rol (auditado)"><bpmn:incoming>SF6</bpmn:incoming><bpmn:outgoing>SF7</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="T1_5" name="Enviar credenciales de acceso"><bpmn:incoming>SF7</bpmn:incoming><bpmn:outgoing>SF8</bpmn:outgoing></bpmn:task>
-    <bpmn:endEvent id="End1_ok" name="Fin — usuario creado y activo"><bpmn:incoming>SF8</bpmn:incoming></bpmn:endEvent>
+    <bpmn:startEvent id="Start1" name="Solicitud de creación de usuario">
+      <bpmn:outgoing>SF1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="T1_1" name="Verificar datos del solicitante">
+      <bpmn:incoming>SF1</bpmn:incoming>
+      <bpmn:outgoing>SF2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="G1_1" name="¿Usuario ya existe en el sistema?">
+      <bpmn:incoming>SF2</bpmn:incoming>
+      <bpmn:outgoing>SF3</bpmn:outgoing>
+      <bpmn:outgoing>SF5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="T1_3" name="Crear usuario (instructor / coordinador / aprendiz / director)">
+      <bpmn:incoming>SF5</bpmn:incoming>
+      <bpmn:outgoing>SF6</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T1_2" name="Rechazar solicitud (usuario duplicado)">
+      <bpmn:incoming>SF3</bpmn:incoming>
+      <bpmn:outgoing>SF4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="End1_rej" name="Fin — solicitud rechazada">
+      <bpmn:incoming>SF4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="T1_4" name="Asignar rol (auditado)">
+      <bpmn:incoming>SF6</bpmn:incoming>
+      <bpmn:outgoing>SF7</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T1_5" name="Enviar credenciales de acceso">
+      <bpmn:incoming>SF7</bpmn:incoming>
+      <bpmn:outgoing>SF8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="End1_ok" name="Fin — usuario creado y activo">
+      <bpmn:incoming>SF8</bpmn:incoming>
+    </bpmn:endEvent>
     <bpmn:sequenceFlow id="SF1" sourceRef="Start1" targetRef="T1_1" />
     <bpmn:sequenceFlow id="SF2" sourceRef="T1_1" targetRef="G1_1" />
     <bpmn:sequenceFlow id="SF3" name="Sí, ya existe" sourceRef="G1_1" targetRef="T1_2" />
-    <bpmn:sequenceFlow id="SF4" sourceRef="T1_2" targetRef="End1_rej" />
     <bpmn:sequenceFlow id="SF5" name="No, es nuevo" sourceRef="G1_1" targetRef="T1_3" />
     <bpmn:sequenceFlow id="SF6" sourceRef="T1_3" targetRef="T1_4" />
+    <bpmn:sequenceFlow id="SF4" sourceRef="T1_2" targetRef="End1_rej" />
     <bpmn:sequenceFlow id="SF7" sourceRef="T1_4" targetRef="T1_5" />
     <bpmn:sequenceFlow id="SF8" sourceRef="T1_5" targetRef="End1_ok" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
       <bpmndi:BPMNShape id="Participant_1_di" bpmnElement="Participant_1" isHorizontal="true">
-        <dc:Bounds x="150" y="80" width="1660" height="170" />
+        <dc:Bounds x="120" y="80" width="1690" height="280" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Start1_di" bpmnElement="Start1">
-        <dc:Bounds x="450" y="137" width="36" height="36" />
-        <bpmndi:BPMNLabel><dc:Bounds x="420" y="176" width="96" height="27" /></bpmndi:BPMNLabel>
+        <dc:Bounds x="262" y="207" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="252" y="246" width="57" height="40" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="T1_1_di" bpmnElement="T1_1">
-        <dc:Bounds x="640" y="115" width="110" height="80" />
+        <dc:Bounds x="445" y="185" width="110" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="G1_1_di" bpmnElement="G1_1">
-        <dc:Bounds x="830" y="130" width="50" height="50" />
-        <bpmndi:BPMNLabel><dc:Bounds x="800" y="183" width="110" height="27" /></bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="T1_2_di" bpmnElement="T1_2">
-        <dc:Bounds x="1020" y="115" width="110" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="End1_rej_di" bpmnElement="End1_rej">
-        <dc:Bounds x="1210" y="137" width="36" height="36" />
-        <bpmndi:BPMNLabel><dc:Bounds x="1180" y="176" width="96" height="27" /></bpmndi:BPMNLabel>
+      <bpmndi:BPMNShape id="G1_1_di" bpmnElement="G1_1" isMarkerVisible="true">
+        <dc:Bounds x="685" y="200" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="657" y="253" width="107" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="T1_3_di" bpmnElement="T1_3">
-        <dc:Bounds x="1020" y="115" width="110" height="80" />
+        <dc:Bounds x="915" y="270" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T1_2_di" bpmnElement="T1_2">
+        <dc:Bounds x="945" y="130" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End1_rej_di" bpmnElement="End1_rej">
+        <dc:Bounds x="1142" y="152" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1124" y="191" width="73" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="T1_4_di" bpmnElement="T1_4">
-        <dc:Bounds x="1210" y="115" width="110" height="80" />
+        <dc:Bounds x="1135" y="270" width="110" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="T1_5_di" bpmnElement="T1_5">
-        <dc:Bounds x="1400" y="115" width="110" height="80" />
+        <dc:Bounds x="1345" y="270" width="110" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="End1_ok_di" bpmnElement="End1_ok">
-        <dc:Bounds x="1590" y="137" width="36" height="36" />
-        <bpmndi:BPMNLabel><dc:Bounds x="1560" y="176" width="96" height="27" /></bpmndi:BPMNLabel>
+        <dc:Bounds x="1590" y="292" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1571" y="331" width="74" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SF1_di" bpmnElement="SF1"><di:waypoint x="486" y="155" /><di:waypoint x="640" y="155" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF2_di" bpmnElement="SF2"><di:waypoint x="750" y="155" /><di:waypoint x="830" y="155" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF3_di" bpmnElement="SF3"><di:waypoint x="880" y="155" /><di:waypoint x="1020" y="155" /><bpmndi:BPMNLabel><dc:Bounds x="1010" y="137" width="20" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF4_di" bpmnElement="SF4"><di:waypoint x="1130" y="155" /><di:waypoint x="1210" y="155" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF5_di" bpmnElement="SF5"><di:waypoint x="880" y="155" /><di:waypoint x="1020" y="155" /><bpmndi:BPMNLabel><dc:Bounds x="1010" y="137" width="20" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF6_di" bpmnElement="SF6"><di:waypoint x="1130" y="155" /><di:waypoint x="1210" y="155" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF7_di" bpmnElement="SF7"><di:waypoint x="1320" y="155" /><di:waypoint x="1400" y="155" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF8_di" bpmnElement="SF8"><di:waypoint x="1510" y="155" /><di:waypoint x="1590" y="155" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF1_di" bpmnElement="SF1">
+        <di:waypoint x="298" y="225" />
+        <di:waypoint x="445" y="225" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF2_di" bpmnElement="SF2">
+        <di:waypoint x="555" y="225" />
+        <di:waypoint x="685" y="225" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF3_di" bpmnElement="SF3">
+        <di:waypoint x="735" y="225" />
+        <di:waypoint x="884" y="225" />
+        <di:waypoint x="884" y="170" />
+        <di:waypoint x="945" y="170" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="870" y="152" width="60" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF4_di" bpmnElement="SF4">
+        <di:waypoint x="1055" y="170" />
+        <di:waypoint x="1142" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF5_di" bpmnElement="SF5">
+        <di:waypoint x="735" y="225" />
+        <di:waypoint x="795" y="225" />
+        <di:waypoint x="795" y="310" />
+        <di:waypoint x="915" y="310" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="826.9999999999992" y="292" width="65" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF6_di" bpmnElement="SF6">
+        <di:waypoint x="1025" y="310" />
+        <di:waypoint x="1135" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF7_di" bpmnElement="SF7">
+        <di:waypoint x="1245" y="310" />
+        <di:waypoint x="1345" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF8_di" bpmnElement="SF8">
+        <di:waypoint x="1455" y="310" />
+        <di:waypoint x="1590" y="310" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

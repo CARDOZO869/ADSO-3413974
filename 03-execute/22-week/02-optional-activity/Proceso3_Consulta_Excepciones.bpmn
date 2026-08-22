@@ -5,88 +5,154 @@
   </bpmn:collaboration>
   <bpmn:process id="Process_ConsultaExcepciones" name="Proceso 3 - Consulta y excepciones" isExecutable="false">
     <bpmn:laneSet id="LaneSet_1">
-      <bpmn:lane id="Lane_Instructor" name="Instructor">
-        <bpmn:flowNodeRef>Start3_i</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>T3_1</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>G3_1</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>T3_2</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>End3_i_exc</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>End3_i_ok</bpmn:flowNodeRef>
-      </bpmn:lane>
       <bpmn:lane id="Lane_Aprendiz" name="Aprendiz">
         <bpmn:flowNodeRef>Start3_a</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>T3_3</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>End3_a</bpmn:flowNodeRef>
       </bpmn:lane>
+      <bpmn:lane id="Lane_Instructor" name="Instructor">
+        <bpmn:flowNodeRef>Start3_i</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>G3_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End3_i_ok</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End3_i_exc</bpmn:flowNodeRef>
+      </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="Start3_i" name="Horario publicado"><bpmn:outgoing>SF1</bpmn:outgoing><bpmn:messageEventDefinition /></bpmn:startEvent>
-    <bpmn:task id="T3_1" name="Consultar mi horario"><bpmn:incoming>SF1</bpmn:incoming><bpmn:outgoing>SF2</bpmn:outgoing></bpmn:task>
-    <bpmn:exclusiveGateway id="G3_1" name="¿Requiere excepción de disponibilidad?"><bpmn:incoming>SF2</bpmn:incoming><bpmn:outgoing>SF3</bpmn:outgoing><bpmn:outgoing>SF5</bpmn:outgoing></bpmn:exclusiveGateway>
-    <bpmn:task id="T3_2" name="Registrar excepción de disponibilidad"><bpmn:incoming>SF3</bpmn:incoming><bpmn:outgoing>SF4</bpmn:outgoing></bpmn:task>
-    <bpmn:endEvent id="End3_i_exc" name="Fin — excepción registrada"><bpmn:incoming>SF4</bpmn:incoming><bpmn:messageEventDefinition /></bpmn:endEvent>
-    <bpmn:endEvent id="End3_i_ok" name="Fin — horario consultado"><bpmn:incoming>SF5</bpmn:incoming></bpmn:endEvent>
-    <bpmn:startEvent id="Start3_a" name="Horario publicado"><bpmn:outgoing>SF6</bpmn:outgoing><bpmn:messageEventDefinition /></bpmn:startEvent>
-    <bpmn:task id="T3_3" name="Consultar horario y notificaciones"><bpmn:incoming>SF6</bpmn:incoming><bpmn:outgoing>SF7</bpmn:outgoing></bpmn:task>
-    <bpmn:endEvent id="End3_a" name="Fin — consulta realizada"><bpmn:incoming>SF7</bpmn:incoming></bpmn:endEvent>
+    <bpmn:startEvent id="Start3_i" name="Horario publicado">
+      <bpmn:outgoing>SF1</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:task id="T3_1" name="Consultar mi horario">
+      <bpmn:incoming>SF1</bpmn:incoming>
+      <bpmn:outgoing>SF2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="G3_1" name="¿Requiere excepción de disponibilidad?">
+      <bpmn:incoming>SF2</bpmn:incoming>
+      <bpmn:outgoing>SF3</bpmn:outgoing>
+      <bpmn:outgoing>SF5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:startEvent id="Start3_a" name="Horario publicado">
+      <bpmn:outgoing>SF6</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:task id="T3_3" name="Consultar horario y notificaciones">
+      <bpmn:incoming>SF6</bpmn:incoming>
+      <bpmn:outgoing>SF7</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="End3_a" name="Fin — consulta realizada">
+      <bpmn:incoming>SF7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="End3_i_ok" name="Fin — horario consultado">
+      <bpmn:incoming>SF5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="T3_2" name="Registrar excepción de disponibilidad">
+      <bpmn:incoming>SF3</bpmn:incoming>
+      <bpmn:outgoing>SF4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="End3_i_exc" name="Fin — excepción registrada">
+      <bpmn:incoming>SF4</bpmn:incoming>
+      <bpmn:messageEventDefinition />
+    </bpmn:endEvent>
     <bpmn:sequenceFlow id="SF1" sourceRef="Start3_i" targetRef="T3_1" />
     <bpmn:sequenceFlow id="SF2" sourceRef="T3_1" targetRef="G3_1" />
     <bpmn:sequenceFlow id="SF3" name="Sí" sourceRef="G3_1" targetRef="T3_2" />
-    <bpmn:sequenceFlow id="SF4" sourceRef="T3_2" targetRef="End3_i_exc" />
     <bpmn:sequenceFlow id="SF5" name="No" sourceRef="G3_1" targetRef="End3_i_ok" />
     <bpmn:sequenceFlow id="SF6" sourceRef="Start3_a" targetRef="T3_3" />
     <bpmn:sequenceFlow id="SF7" sourceRef="T3_3" targetRef="End3_a" />
+    <bpmn:sequenceFlow id="SF4" sourceRef="T3_2" targetRef="End3_i_exc" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
       <bpmndi:BPMNShape id="Participant_1_di" bpmnElement="Participant_1" isHorizontal="true">
-        <dc:Bounds x="150" y="80" width="1280" height="320" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_Instructor_di" bpmnElement="Lane_Instructor" isHorizontal="true">
-        <dc:Bounds x="180" y="80" width="1220" height="150" />
+        <dc:Bounds x="150" y="80" width="1280" height="370" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Aprendiz_di" bpmnElement="Lane_Aprendiz" isHorizontal="true">
-        <dc:Bounds x="180" y="230" width="1220" height="150" />
+        <dc:Bounds x="180" y="280" width="1220" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Instructor_di" bpmnElement="Lane_Instructor" isHorizontal="true">
+        <dc:Bounds x="180" y="80" width="1220" height="200" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Start3_i_di" bpmnElement="Start3_i">
-        <dc:Bounds x="450" y="137" width="36" height="36" />
-        <bpmndi:BPMNLabel><dc:Bounds x="420" y="176" width="96" height="27" /></bpmndi:BPMNLabel>
+        <dc:Bounds x="450" y="187" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="425" y="226" width="87" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="T3_1_di" bpmnElement="T3_1">
-        <dc:Bounds x="640" y="115" width="110" height="80" />
+        <dc:Bounds x="640" y="165" width="110" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="G3_1_di" bpmnElement="G3_1">
-        <dc:Bounds x="830" y="130" width="50" height="50" />
-        <bpmndi:BPMNLabel><dc:Bounds x="800" y="183" width="110" height="27" /></bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="T3_2_di" bpmnElement="T3_2">
-        <dc:Bounds x="1020" y="115" width="110" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="End3_i_exc_di" bpmnElement="End3_i_exc">
-        <dc:Bounds x="1210" y="137" width="36" height="36" />
-        <bpmndi:BPMNLabel><dc:Bounds x="1180" y="176" width="96" height="27" /></bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="End3_i_ok_di" bpmnElement="End3_i_ok">
-        <dc:Bounds x="1020" y="137" width="36" height="36" />
-        <bpmndi:BPMNLabel><dc:Bounds x="990" y="176" width="96" height="27" /></bpmndi:BPMNLabel>
+      <bpmndi:BPMNShape id="G3_1_di" bpmnElement="G3_1" isMarkerVisible="true">
+        <dc:Bounds x="830" y="180" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="803" y="233" width="104" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Start3_a_di" bpmnElement="Start3_a">
-        <dc:Bounds x="450" y="287" width="36" height="36" />
-        <bpmndi:BPMNLabel><dc:Bounds x="420" y="326" width="96" height="27" /></bpmndi:BPMNLabel>
+        <dc:Bounds x="450" y="337" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="425" y="376" width="87" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="T3_3_di" bpmnElement="T3_3">
-        <dc:Bounds x="640" y="265" width="110" height="80" />
+        <dc:Bounds x="640" y="315" width="110" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="End3_a_di" bpmnElement="End3_a">
-        <dc:Bounds x="830" y="287" width="36" height="36" />
-        <bpmndi:BPMNLabel><dc:Bounds x="800" y="326" width="96" height="27" /></bpmndi:BPMNLabel>
+        <dc:Bounds x="830" y="337" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="811" y="376" width="74" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SF1_di" bpmnElement="SF1"><di:waypoint x="486" y="155" /><di:waypoint x="640" y="155" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF2_di" bpmnElement="SF2"><di:waypoint x="750" y="155" /><di:waypoint x="830" y="155" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF3_di" bpmnElement="SF3"><di:waypoint x="880" y="155" /><di:waypoint x="1020" y="155" /><bpmndi:BPMNLabel><dc:Bounds x="1010" y="137" width="20" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF4_di" bpmnElement="SF4"><di:waypoint x="1130" y="155" /><di:waypoint x="1210" y="155" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF5_di" bpmnElement="SF5"><di:waypoint x="880" y="155" /><di:waypoint x="1020" y="155" /><bpmndi:BPMNLabel><dc:Bounds x="1010" y="137" width="20" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF6_di" bpmnElement="SF6"><di:waypoint x="486" y="305" /><di:waypoint x="640" y="305" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SF7_di" bpmnElement="SF7"><di:waypoint x="750" y="305" /><di:waypoint x="830" y="305" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="End3_i_ok_di" bpmnElement="End3_i_ok">
+        <dc:Bounds x="912" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="897" y="141" width="67" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_2_di" bpmnElement="T3_2">
+        <dc:Bounds x="1035" y="165" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End3_i_exc_di" bpmnElement="End3_i_exc">
+        <dc:Bounds x="1222" y="187" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1199" y="226" width="82" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SF1_di" bpmnElement="SF1">
+        <di:waypoint x="486" y="205" />
+        <di:waypoint x="640" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF2_di" bpmnElement="SF2">
+        <di:waypoint x="750" y="205" />
+        <di:waypoint x="830" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF3_di" bpmnElement="SF3">
+        <di:waypoint x="880" y="205" />
+        <di:waypoint x="1035" y="205" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="994" y="187" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF4_di" bpmnElement="SF4">
+        <di:waypoint x="1145" y="205" />
+        <di:waypoint x="1222" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF5_di" bpmnElement="SF5">
+        <di:waypoint x="855" y="180" />
+        <di:waypoint x="855" y="120" />
+        <di:waypoint x="912" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="888" y="102" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF6_di" bpmnElement="SF6">
+        <di:waypoint x="486" y="355" />
+        <di:waypoint x="640" y="355" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF7_di" bpmnElement="SF7">
+        <di:waypoint x="750" y="355" />
+        <di:waypoint x="830" y="355" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
