@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Def_Proceso2" targetNamespace="http://sena.edu.co/bpmn/gestion-horarios" exporter="Camunda Modeler" exporterVersion="5.50.1">
+  <bpmn:collaboration id="Collaboration_1">
+    <bpmn:participant id="Participant_1" name="SENA — Proceso 2: Construcción y publicación del horario" processRef="Process_PublicacionHorario" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_PublicacionHorario" name="Proceso 2 - Construcción y publicación del horario" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1">
+      <bpmn:lane id="Lane_Coordinador" name="Coordinador">
+        <bpmn:flowNodeRef>Start2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T2_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T2_2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T2_5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T2_6</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Sistema" name="Sistema">
+        <bpmn:flowNodeRef>T2_3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T2_7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T2_8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T2_4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>G2_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start2" name="Inicio de período académico">
+      <bpmn:outgoing>SF1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="T2_1" name="Crear nuevo horario (ficha y período)">
+      <bpmn:incoming>SF1</bpmn:incoming>
+      <bpmn:outgoing>SF2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T2_2" name="Agregar sesión (instructor, ambiente, competencia, franja)">
+      <bpmn:incoming>SF2</bpmn:incoming>
+      <bpmn:outgoing>SF3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T2_3" name="Validar sesión y detectar conflictos">
+      <bpmn:incoming>SF3</bpmn:incoming>
+      <bpmn:incoming>SF8</bpmn:incoming>
+      <bpmn:outgoing>SF4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T2_5" name="Resolver conflicto (panel de conflictos)">
+      <bpmn:incoming>SF7</bpmn:incoming>
+      <bpmn:outgoing>SF8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T2_6" name="Solicitar publicación del horario">
+      <bpmn:incoming>SF6</bpmn:incoming>
+      <bpmn:outgoing>SF9</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T2_7" name="Publicar horario (pasa a solo lectura)">
+      <bpmn:incoming>SF9</bpmn:incoming>
+      <bpmn:outgoing>SF10</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T2_8" name="Generar documento (constancia PDF)">
+      <bpmn:incoming>SF10</bpmn:incoming>
+      <bpmn:outgoing>SF11</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="End2" name="Fin — horario publicado y notificado">
+      <bpmn:incoming>SF11</bpmn:incoming>
+      <bpmn:messageEventDefinition />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SF1" sourceRef="Start2" targetRef="T2_1" />
+    <bpmn:sequenceFlow id="SF2" sourceRef="T2_1" targetRef="T2_2" />
+    <bpmn:sequenceFlow id="SF3" sourceRef="T2_2" targetRef="T2_3" />
+    <bpmn:sequenceFlow id="SF4" sourceRef="T2_3" targetRef="G2_1" />
+    <bpmn:sequenceFlow id="SF5" name="Sí" sourceRef="G2_1" targetRef="T2_4" />
+    <bpmn:sequenceFlow id="SF6" name="No" sourceRef="G2_1" targetRef="T2_6" />
+    <bpmn:sequenceFlow id="SF7" sourceRef="T2_4" targetRef="T2_5" />
+    <bpmn:sequenceFlow id="SF8" sourceRef="T2_5" targetRef="T2_3" />
+    <bpmn:sequenceFlow id="SF9" sourceRef="T2_6" targetRef="T2_7" />
+    <bpmn:sequenceFlow id="SF10" sourceRef="T2_7" targetRef="T2_8" />
+    <bpmn:sequenceFlow id="SF11" sourceRef="T2_8" targetRef="End2" />
+    <bpmn:task id="T2_4" name="Registrar conflicto (instructor / ambiente / solapadas)">
+      <bpmn:incoming>SF5</bpmn:incoming>
+      <bpmn:outgoing>SF7</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="G2_1" name="¿Conflicto detectado?">
+      <bpmn:incoming>SF4</bpmn:incoming>
+      <bpmn:outgoing>SF5</bpmn:outgoing>
+      <bpmn:outgoing>SF6</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
+      <bpmndi:BPMNShape id="Participant_1_di" bpmnElement="Participant_1" isHorizontal="true">
+        <dc:Bounds x="150" y="80" width="2230" height="320" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Sistema_di" bpmnElement="Lane_Sistema" isHorizontal="true">
+        <dc:Bounds x="180" y="230" width="2170" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Coordinador_di" bpmnElement="Lane_Coordinador" isHorizontal="true">
+        <dc:Bounds x="180" y="80" width="2170" height="150" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Start2_di" bpmnElement="Start2">
+        <dc:Bounds x="450" y="137" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="420" y="176" width="96" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_1_di" bpmnElement="T2_1">
+        <dc:Bounds x="640" y="115" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_2_di" bpmnElement="T2_2">
+        <dc:Bounds x="830" y="115" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_3_di" bpmnElement="T2_3">
+        <dc:Bounds x="1020" y="265" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_5_di" bpmnElement="T2_5">
+        <dc:Bounds x="1590" y="115" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_6_di" bpmnElement="T2_6">
+        <dc:Bounds x="1590" y="115" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_7_di" bpmnElement="T2_7">
+        <dc:Bounds x="1780" y="265" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_8_di" bpmnElement="T2_8">
+        <dc:Bounds x="1970" y="265" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End2_di" bpmnElement="End2">
+        <dc:Bounds x="2160" y="287" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2130" y="326" width="96" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T2_4_di" bpmnElement="T2_4">
+        <dc:Bounds x="1495" y="280" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="G2_1_di" bpmnElement="G2_1" isMarkerVisible="true">
+        <dc:Bounds x="1210" y="245" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1181" y="298" width="108" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SF1_di" bpmnElement="SF1">
+        <di:waypoint x="486" y="155" />
+        <di:waypoint x="640" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF2_di" bpmnElement="SF2">
+        <di:waypoint x="750" y="155" />
+        <di:waypoint x="830" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF3_di" bpmnElement="SF3">
+        <di:waypoint x="940" y="155" />
+        <di:waypoint x="980" y="155" />
+        <di:waypoint x="980" y="305" />
+        <di:waypoint x="1020" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF4_di" bpmnElement="SF4">
+        <di:waypoint x="1130" y="305" />
+        <di:waypoint x="1170" y="305" />
+        <di:waypoint x="1170" y="270" />
+        <di:waypoint x="1210" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF5_di" bpmnElement="SF5">
+        <di:waypoint x="1260" y="270" />
+        <di:waypoint x="1378" y="270" />
+        <di:waypoint x="1378" y="340" />
+        <di:waypoint x="1495" y="340" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1461.9999999999998" y="322" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF6_di" bpmnElement="SF6">
+        <di:waypoint x="1260" y="270" />
+        <di:waypoint x="1380" y="270" />
+        <di:waypoint x="1380" y="155" />
+        <di:waypoint x="1590" y="155" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1373" y="137" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF7_di" bpmnElement="SF7">
+        <di:waypoint x="1550" y="280" />
+        <di:waypoint x="1550" y="155" />
+        <di:waypoint x="1590" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF8_di" bpmnElement="SF8">
+        <di:waypoint x="1645" y="115" />
+        <di:waypoint x="1645" y="90" />
+        <di:waypoint x="1030" y="90" />
+        <di:waypoint x="1030" y="265" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF9_di" bpmnElement="SF9">
+        <di:waypoint x="1700" y="155" />
+        <di:waypoint x="1740" y="155" />
+        <di:waypoint x="1740" y="305" />
+        <di:waypoint x="1780" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF10_di" bpmnElement="SF10">
+        <di:waypoint x="1890" y="305" />
+        <di:waypoint x="1970" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF11_di" bpmnElement="SF11">
+        <di:waypoint x="2080" y="305" />
+        <di:waypoint x="2160" y="305" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
