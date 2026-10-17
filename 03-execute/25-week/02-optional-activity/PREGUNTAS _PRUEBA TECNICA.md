@@ -1,4 +1,4 @@
-# Preguntas sobre combos
+# Preguntas sobrre la prueba tecnica
 
 1. ¿Cuál es la fuente de verdad del precio de un combo y cómo se valida que el descuento aplicado sea correcto?
 
