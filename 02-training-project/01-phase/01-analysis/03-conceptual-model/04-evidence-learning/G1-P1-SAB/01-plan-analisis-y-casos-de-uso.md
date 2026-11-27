@@ -44,8 +44,7 @@
 | 4     | Construir matriz de trazabilidad requisito funcional → caso de uso         | Juan Sebastián Medina Cardozo | 27/11/2026                     | Matriz de 100 requisitos funcionales vinculados             |
 | 5     | Ajustar diagrama UML de casos de uso por rol y revisar relaciones          | Juan Sebastián Medina Cardozo | 27/11/2026                     | Fuente DOT editable y SVG exportado                         |
 | 6     | Revisar cobertura, nombres, actores, frontera y relaciones UML con rúbrica | Juan Sebastián Medina Cardozo | 27/11/2026                     | Lista de revisión del Producto 1 y registro de correcciones |
-| 7     | Actualizar README con reutilización, cambios, IA y autoría                 | Juan Sebastián Medina Cardozo | 27/11/2026                     | README de entrega diligenciado                              |
-| 8     | Publicar los archivos en el fork y comprobar la carpeta antes del cierre   | Juan Sebastián Medina Cardozo | 28/11/2026 antes de 6:00 a. m. | Enlace al commit publicado y carpeta visible                |
+| 7     | Actualizar README con reutilización, cambios, IA y autoría                 | Juan Sebastián Medina Cardozo | 27/11/2026                     | README de entrega diligenciado                              |     |
 
 ## D. Matriz requisito funcional → caso de uso
 
