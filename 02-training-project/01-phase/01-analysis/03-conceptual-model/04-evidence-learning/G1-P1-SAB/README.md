@@ -28,9 +28,7 @@
 - [Diagrama editable DOT](./04_diagrama_casos_uso.dot)
 - [Diagrama SVG](./04_diagrama_casos_uso.svg)
 
-## Uso de IA
 
-Se utilizó asistencia de IA para organizar el borrador y generar una primera propuesta de trazabilidad y diagrama. El aprendiz debe revisar cada vínculo contra el SRS y el tablero, corregir lo que no coincida y poder explicar las decisiones UML antes de publicar.
 
 ## Declaración de autoría
 
