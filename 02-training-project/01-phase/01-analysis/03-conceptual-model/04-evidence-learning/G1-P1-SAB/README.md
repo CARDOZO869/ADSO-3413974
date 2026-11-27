@@ -5,12 +5,12 @@
 - **Aprendiz:** Juan Sebastián Medina Cardozo.
 - **Caso:** Sistema de Asistencia Biométrica (SAB).
 - **Producto:** plan de análisis y casos de uso.
-- **Fuente de requisitos:** `SRS_SAB.docx`, versión del 25/11/2026.
+- **Fuente de requisitos:** `SRS-SAB-001`, versión 2.3, revisión del 27/11/2026.
 
 ## Qué reutilicé
 
 - SRS del SAB actualizado, elaborado como insumo del proyecto del equipo.
-- Los 29 casos de uso y códigos RF/RNF incluidos en la sección 5 y 4 del SRS.
+- Los 30 casos de uso, 100 RF y 40 RNF incluidos en las secciones 5 y 4 del SRS v2.3.
 - Tablero Trello SAB como referencia de priorización y organización; no se copió su contenido como artefacto.
 - Mockup publicado de SAB como referencia visual; no se afirma que sus controles estén implementados.
 
@@ -18,14 +18,15 @@
 
 - Caracterización del proyecto y comparación de Scrum, RUP y XP con criterios del SAB.
 - Selección justificada de Scrum y plan individual de ocho actividades con responsables, fechas y entregables.
-- Matriz de trazabilidad de los 94 RF del SRS a sus casos de uso.
-- Diagrama de casos de uso exportado a SVG y fuente editable DOT.
+- Matriz de trazabilidad inicial para los 100 RF del SRS v2.3; los RF nuevos quedan identificados para revisión contra criterios y flujos del documento fuente.
+- Diagrama de casos de uso actualizado con CU-30, exportado a SVG y con fuente editable DOT coherente.
 - Relaciones UML justificadas y decisiones pendientes señaladas como pendientes.
 
 ## Archivos
 
 - [Plan, caracterización y matriz](./01-plan-analisis-y-casos-de-uso.md)
 - [Diagrama editable DOT](./04_diagrama_casos_uso.dot)
+- [Fuente Mermaid histórica](./diagrama-casos-de-uso.mmd) (no usar como diagrama vigente; se conserva como antecedente de otro modelo).
 - [Diagrama SVG](./04_diagrama_casos_uso.svg)
 
 
