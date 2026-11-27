@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" version="24.7.17" type="device">
+  <diagram name="Aprendiz">
+    <mxGraphModel page="1" pageWidth="1500" pageHeight="1000" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="sys" value="SAB — Casos de uso del Aprendiz" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#444444;strokeWidth=2;fontSize=20;fontStyle=1;verticalAlign=top;spacingTop=12;" vertex="1" parent="1">
+          <mxGeometry x="280" y="70" width="1150" height="860" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor" value="Aprendiz" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="70" y="420" width="100" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="case0" value="CU-01 — Iniciar sesión" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="120" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc0" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case0">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case1" value="CU-03 — Registrar aprendiz" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="225" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case2" value="CU-04 — Enrolar identidad" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="330" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case3" value="CU-06 — Verificar identidad" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="435" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case4" value="CU-07 — Validar QR o código" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="540" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc4" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case5" value="CU-08 — Registrar asistencia" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="645" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc5" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case6" value="CU-13 — Enviar excusa" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="750" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case7" value="CU-19 — Consultar historial" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="880" y="120" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc7" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case8" value="CU-21 — Consultar panel e indicadores propios" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="880" y="225" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc8" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case9" value="CU-22 — Consultar competencias y resultados" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="880" y="330" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc9" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case10" value="CU-23 — Consultar notificaciones y novedades" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="880" y="435" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc10" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case11" value="CU-27 — Consultar estados de validación" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="880" y="540" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc11" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="case12" value="CU-30 — Crear cuenta por rol" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F1F8EC;strokeColor=#39A900;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="880" y="645" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="assoc12" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;endArrow=none;startArrow=none;" edge="1" parent="1" source="actor" target="case12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="include0" value="«include»" style="dashed=1;endArrow=open;html=1;strokeColor=#666666;fontSize=13;" edge="1" parent="1" source="case5" target="case4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="include1" value="«include»" style="dashed=1;endArrow=open;html=1;strokeColor=#666666;fontSize=13;" edge="1" parent="1" source="case5" target="case3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
