@@ -1,9 +1,9 @@
 # G1 · Producto 1: Plan de análisis y casos de uso — SAB
 
-**Aprendiz:** Juan Sebastián Medina Cardozo  
-**Programa:** ADSO · Ficha 3413974  
-**Insumo principal:** `SRS_SAB.docx` (versión 25 de noviembre de 2026)  
-**Caso:** Sistema de Asistencia Biométrica (SAB)  
+**Aprendiz:** Juan Sebastián Medina Cardozo
+**Programa:** ADSO · Ficha 3413974
+**Insumo principal:** `SRS-SAB-001`, versión 2.3 (27 de noviembre de 2026)
+**Caso:** Sistema de Asistencia Biométrica (SAB)
 
 > Documento de trabajo individual preparado a partir del SRS indicado. La selección metodológica y el plan son propuestas académicas; los valores que el SRS deja pendientes de aprobación no se presentan como decisiones institucionales definitivas.
 
@@ -11,9 +11,9 @@
 
 | Aspecto | Caracterización SAB | Implicación para el análisis |
 |---|---|---|
-| Tipo de proyecto | Aplicación web para registrar asistencia, administrar sesiones, consultar novedades y generar reportes. Alcance inicial: sedes Comercio e Industria de Neiva. | Modelar procesos de tres roles (Superadmin, Instructor/Admin y Aprendiz) y sus permisos. |
+| Tipo de proyecto | Aplicación web para registrar asistencia, administrar sesiones, consultar novedades y generar reportes. Alcance inicial: sedes Comercio e Industria de Neiva. | Modelar procesos de tres roles (Aprendiz, Instructor y Superadmin) y sus permisos. |
 | Tamaño del equipo | Proyecto académico pequeño, con tres integrantes nombrados en el SRS. Esta entrega y sus ajustes son individuales. | Conviene coordinar requisitos mediante un backlog común y dejar decisiones verificables. |
-| Estabilidad de requisitos | Media: el SRS contiene 94 RF y 40 RNF; algunos parámetros, proveedor facial, retención y reglas institucionales siguen pendientes de aprobación. | Mantener trazabilidad y revisar requisitos cuando se resuelvan las decisiones abiertas. |
+| Estabilidad de requisitos | Media: el SRS contiene 100 RF y 40 RNF; algunos parámetros, proveedor facial, retención y reglas institucionales siguen pendientes de aprobación. | Mantener trazabilidad y revisar requisitos cuando se resuelvan las decisiones abiertas. |
 | Disponibilidad del cliente | No se documenta disponibilidad continua de usuarios institucionales; validar reglas con instructor y representantes de sede antes de producción. | Planificar validaciones cortas y registrar supuestos, preguntas y acuerdos. |
 
 ### Alcance y restricciones que afectan el análisis
@@ -44,7 +44,7 @@
 | 1 | Confirmar alcance, actores, restricciones y versión base del SRS | Juan Sebastián Medina Cardozo | 26/11/2026 | Ficha de caracterización y registro de supuestos |
 | 2 | Revisar y priorizar RF/RNF; identificar decisiones abiertas y dependencias | Juan Sebastián Medina Cardozo | 26/11/2026 | Backlog de análisis priorizado y lista de preguntas |
 | 3 | Comparar metodologías y acordar la forma de trabajo para el análisis | Juan Sebastián Medina Cardozo | 26/11/2026 | Comparación y justificación documentadas |
-| 4 | Construir matriz de trazabilidad requisito funcional → caso de uso | Juan Sebastián Medina Cardozo | 27/11/2026 | Matriz de 94 requisitos funcionales vinculados |
+| 4 | Construir matriz de trazabilidad requisito funcional → caso de uso | Juan Sebastián Medina Cardozo | 27/11/2026 | Matriz de 100 requisitos funcionales vinculados |
 | 5 | Ajustar diagrama UML de casos de uso por rol y revisar relaciones | Juan Sebastián Medina Cardozo | 27/11/2026 | Fuente DOT editable y SVG exportado |
 | 6 | Revisar cobertura, nombres, actores, frontera y relaciones UML con rúbrica | Juan Sebastián Medina Cardozo | 27/11/2026 | Lista de revisión del Producto 1 y registro de correcciones |
 | 7 | Actualizar README con reutilización, cambios, IA y autoría | Juan Sebastián Medina Cardozo | 27/11/2026 | README de entrega diligenciado |
@@ -52,7 +52,7 @@
 
 ## D. Matriz requisito funcional → caso de uso
 
-El SRS aporta **94 RF**. Se vincularon todos a los 29 casos de uso nombrados en la sección 5.1; cobertura: **100 % (94/94)**. Los RNF no se incorporan como casos de uso: se verifican como restricciones y atributos de calidad. Revisar el mapa frente al diagrama vigente del SRS antes de publicar, especialmente los RF añadidos en la versión más reciente.
+El SRS versión 2.3 aporta **100 RF, 40 RNF y 30 casos de uso**. La matriz conserva los vínculos publicados para RF-SAB-001 a RF-SAB-094 y añade una asignación inicial para RF-SAB-095 a RF-SAB-100. Cobertura: 100/100 IDs representados; la asignación funcional requiere cotejo final con los criterios completos del SRS y se presenta como propuesta de análisis. Los RNF se consideran restricciones y atributos de calidad, no objetivos independientes de actor. El mockup actualizado se usa como referencia para los tres roles, el registro por rol y la cámara guiada; no se presenta como prueba de que el software esté implementado.
 
 | ID SRS | Requisito | Caso de uso relacionado |
 |---|---|---|
@@ -150,6 +150,12 @@ El SRS aporta **94 RF**. Se vincularon todos a los 29 casos de uso nombrados en 
 | RF-SAB-092 | Retirar novedades | CU-26 · Gestionar novedades institucionales |
 | RF-SAB-093 | Validaciones de sesión | CU-27 · Consultar estados de validación |
 | RF-SAB-094 | Consultar novedades | CU-23 · Consultar notificaciones y novedades |
+| RF-SAB-095 | Registrar cuenta según el rol | CU-30 · Crear cuenta por rol |
+| RF-SAB-096 | Validar ficha del aprendiz | CU-30 · Crear cuenta por rol |
+| RF-SAB-097 | Validar unicidad de cuenta | CU-30 · Crear cuenta por rol |
+| RF-SAB-098 | Guiar captura facial | CU-06 · Verificar identidad |
+| RF-SAB-099 | Adaptar vista de cámara | CU-06 · Verificar identidad |
+| RF-SAB-100 | Informar método de autenticación | CU-06 · Verificar identidad |
 
 ### Requisitos no funcionales
 
@@ -157,7 +163,7 @@ Los 40 RNF-SAB-001 a RNF-SAB-040 se tratan como restricciones/calidades (segurid
 
 ## E. Diagrama de casos de uso UML
 
-Fuente editable: [`04_diagrama_casos_uso.dot`](./04_diagrama_casos_uso.dot). Imagen: [`04_diagrama_casos_uso.svg`](./04_diagrama_casos_uso.svg). El diagrama presenta actores fuera de la frontera, nombres con verbo y objeto, y relaciones justificadas a continuación.
+Fuente editable: [`04_diagrama_casos_uso.dot`](./04_diagrama_casos_uso.dot). Imagen: [`04_diagrama_casos_uso.svg`](./04_diagrama_casos_uso.svg). El diagrama cubre los 30 casos de uso de la sección 5.1, presenta actores fuera de la frontera, nombres con verbo y objeto, y relaciones justificadas a continuación.
 
 | Relación | Justificación |
 |---|---|
@@ -165,9 +171,10 @@ Fuente editable: [`04_diagrama_casos_uso.dot`](./04_diagrama_casos_uso.dot). Ima
 | CU-08 «Registrar asistencia» incluye CU-06 «Verificar identidad» | El registro ordinario exige verificar identidad antes de confirmar la marca; la modalidad concreta se selecciona según autorización y disponibilidad. |
 | CU-09 «Escalar incidencia» extiende CU-06 «Verificar identidad» | Solo ocurre de forma condicional cuando se alcanza el límite de intentos fallidos; la flecha sale del caso que extiende hacia el caso base. |
 | CU-11 «Registrar asistencia manual» generaliza CU-08 «Registrar asistencia» | La asistencia manual es una modalidad especializada y supervisada de registro, con datos adicionales de causa y responsable. |
+| CU-30 «Crear cuenta por rol» extiende CU-01 «Iniciar sesión» | El registro aparece como flujo opcional iniciado desde la pantalla de acceso, solo cuando el usuario solicita crear una cuenta. |
 
 ### Decisiones pendientes de validar
 
-- El SRS denomina los roles como Superadmin, Instructor/Admin y Aprendiz; confirmar si Admin es un rol separado del Instructor en la versión acordada.
-- La renovación QR cada 15 s, ventana de identidad de 60 s, límite de intentos, proveedor facial y política de retención requieren aprobación antes de producción.
-- Las asignaciones de la matriz reflejan interpretación de los títulos RF y casos de uso del propio SRS; deben cotejarse con los diagramas incluidos en el documento fuente.
+- El SRS versión 2.3 define Aprendiz, Instructor y Superadmin como roles de la interfaz. Las cuentas de Instructor y Superadmin requieren autorización de servidor; no se asignan privilegios solo por selección en el formulario.
+- La renovación QR, la ventana de identidad, el límite de intentos, el proveedor facial y la política de retención requieren aprobación antes de producción, según el SRS.
+- Las asignaciones de la matriz se basan en la sección 5.1 del SRS v2.3 y deben revisarse junto con el equipo antes de cerrar el borrador. El SRS v2.3 incluye criterios de aceptación incompletos para RF-SAB-095 y RF-SAB-098 a RF-SAB-100; las relaciones se basan en los flujos de CU-30 y CU-06, pendientes de validación del equipo.
