@@ -1,16 +1,44 @@
-# Entrega G1-P1 · Plan de análisis y casos de uso — SAB
+# G1 · Producto 1 — SAB
 
-- **Aprendiz:** Juan Cardozo (`CARDOZO869`)
-- **Proyecto:** SAB — Sistema de Asistencia Biométrica para Aprendices SENA
+## Datos de la entrega
 
-## Qué se reutilizó
-- Documentación base del proyecto de asistencia biométrica ubicada en `03-execute/14-week/02-optional-activity/` (`Normativa_Proyecto_Asistencia_Biometrica(1).docx`, `Mockup digital asistencia.pptx`), `03-execute/15-week/02-optional-activity/` y `03-execute/17-week/02-optional-activity/Sistema de Asistencia Biométrica para Aprendices SENA.pdf`.
+- **Aprendiz:** Juan Sebastián Medina Cardozo.
+- **Caso:** Sistema de Asistencia Biométrica (SAB).
+- **Producto:** plan de análisis y casos de uso.
+- **Fuente de requisitos:** `SRS_SAB.docx`, versión del 25/11/2026.
 
-## Qué se ajustó y qué se construyó nuevo
-1. Se elaboró la caracterización de la solución (tipo, equipo, estabilidad y disponibilidad del cliente) y la comparación de metodologías (RUP, Scrum, XP, RAD) seleccionando **Scrum**.
-2. Se estructuró el plan de actividades de análisis con 6 actividades, responsables, fechas y entregables.
-3. Se definieron 10 requisitos funcionales (RF-01 a RF-10) y 3 no funcionales (RNF-01 a RNF-03) mapeados al 100 % en la matriz RF → Caso de Uso, junto con el diagrama UML en Mermaid (`diagrama-casos-de-uso.mmd`) con relaciones `«include»` y `«extend»` justificadas.
+## Qué reutilicé
 
-## Declaración de autoría y uso de IA
-- Declaro que este producto fue elaborado de forma individual reutilizando los insumos de mi proyecto del año.
-- **Uso de IA:** Se utilizó asistencia de IA para estructurar las tablas de trazabilidad, redacción de justificaciones y sintaxis Mermaid del diagrama; todo el contenido fue revisado y ajustado al dominio de SAB.
+- SRS del SAB actualizado, elaborado como insumo del proyecto del equipo.
+- Los 29 casos de uso y códigos RF/RNF incluidos en la sección 5 y 4 del SRS.
+- Tablero Trello SAB como referencia de priorización y organización; no se copió su contenido como artefacto.
+- Mockup publicado de SAB como referencia visual; no se afirma que sus controles estén implementados.
+
+## Qué preparé o ajusté para esta entrega
+
+- Caracterización del proyecto y comparación de Scrum, RUP y XP con criterios del SAB.
+- Selección justificada de Scrum y plan individual de ocho actividades con responsables, fechas y entregables.
+- Matriz de trazabilidad de los 94 RF del SRS a sus casos de uso.
+- Diagrama de casos de uso exportado a SVG y fuente editable DOT.
+- Relaciones UML justificadas y decisiones pendientes señaladas como pendientes.
+
+## Archivos
+
+- [Plan, caracterización y matriz](./01-plan-analisis-y-casos-de-uso.md)
+- [Diagrama editable DOT](./04_diagrama_casos_uso.dot)
+- [Diagrama SVG](./04_diagrama_casos_uso.svg)
+
+## Uso de IA
+
+Se utilizó asistencia de IA para organizar el borrador y generar una primera propuesta de trazabilidad y diagrama. El aprendiz debe revisar cada vínculo contra el SRS y el tablero, corregir lo que no coincida y poder explicar las decisiones UML antes de publicar.
+
+## Declaración de autoría
+
+Declaro que revisaré, ajustaré y explicaré personalmente los artefactos de esta carpeta. El SRS se reutiliza como insumo del proyecto; este Producto 1 debe quedar como ajuste individual.
+
+## Control de publicación
+
+Completar al publicar: incluir enlaces a commits reales de cambios sustantivos en al menos dos días distintos, dentro de la ventana indicada por la guía. No inventar fechas ni enlaces.
+
+- Commit de avance: `PENDIENTE DE PUBLICAR`.
+- Commit de revisión: `PENDIENTE DE PUBLICAR`.
