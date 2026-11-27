@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1450" viewBox="0 0 1450 1450">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1 1 L8 4.5 L1 8" fill="none" stroke="#555" stroke-width="1.2"/></marker></defs>
+<rect width="1450" height="1450" fill="white"/>
+<rect x="250" y="50" width="1100" height="1340" fill="none" stroke="#333" stroke-width="1.5"/><text x="800.0" y="75" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold">SAB - Gestión de clase</text>
+<path d="M 155 580.0 L 470 146.0" fill="none" stroke="#777" stroke-width="1.2"/>
+<path d="M 155 580.0 L 470 336.0" fill="none" stroke="#777" stroke-width="1.2"/>
+<path d="M 155 580.0 L 470 526.0" fill="none" stroke="#777" stroke-width="1.2"/>
+<path d="M 155 580.0 L 470 716.0" fill="none" stroke="#777" stroke-width="1.2"/>
+<path d="M 155 580.0 L 470 906.0" fill="none" stroke="#777" stroke-width="1.2"/>
+<path d="M 155 580.0 L 470 1096.0" fill="none" stroke="#777" stroke-width="1.2"/>
+<path d="M 155 580.0 L 470 1286.0" fill="none" stroke="#777" stroke-width="1.2"/>
+<circle cx="105.0" cy="538" r="10" fill="white" stroke="#333" stroke-width="2"/><path d="M 105.0 548 L 105.0 590 M 88.0 563 L 122.0 563 M 105.0 590 L 90.0 614 M 105.0 590 L 120.0 614" fill="none" stroke="#333" stroke-width="2"/>
+<text x="105.0" y="632" text-anchor="middle" font-family="Arial" font-size="12"><tspan x="105.0" dy="0">Instructor</tspan></text>
+<ellipse cx="695.0" cy="146.0" rx="225.0" ry="36.0" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+<text x="695.0" y="139" text-anchor="middle" font-family="Arial" font-size="13" fill="#222"><tspan font-weight="bold">CU-05</tspan><tspan x="695.0" dy="18">Abrir sesión</tspan></text>
+<ellipse cx="695.0" cy="336.0" rx="225.0" ry="36.0" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+<text x="695.0" y="329" text-anchor="middle" font-family="Arial" font-size="13" fill="#222"><tspan font-weight="bold">CU-09</tspan><tspan x="695.0" dy="18">Escalar incidencia</tspan></text>
+<ellipse cx="695.0" cy="526.0" rx="225.0" ry="36.0" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+<text x="695.0" y="519" text-anchor="middle" font-family="Arial" font-size="13" fill="#222"><tspan font-weight="bold">CU-10</tspan><tspan x="695.0" dy="18">Cerrar sesión y exportar</tspan></text>
+<ellipse cx="695.0" cy="716.0" rx="225.0" ry="36.0" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+<text x="695.0" y="709" text-anchor="middle" font-family="Arial" font-size="13" fill="#222"><tspan font-weight="bold">CU-11</tspan><tspan x="695.0" dy="18">Registrar asistencia manual</tspan></text>
+<ellipse cx="695.0" cy="906.0" rx="225.0" ry="36.0" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+<text x="695.0" y="899" text-anchor="middle" font-family="Arial" font-size="13" fill="#222"><tspan font-weight="bold">CU-12</tspan><tspan x="695.0" dy="18">Cancelar clase</tspan></text>
+<ellipse cx="695.0" cy="1096.0" rx="225.0" ry="36.0" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+<text x="695.0" y="1089" text-anchor="middle" font-family="Arial" font-size="13" fill="#222"><tspan font-weight="bold">CU-20</tspan><tspan x="695.0" dy="18">Contingencia de servicio</tspan></text>
+<ellipse cx="695.0" cy="1286.0" rx="225.0" ry="36.0" fill="#f5f5f5" stroke="#999" stroke-width="1.2"/>
+<text x="695.0" y="1279" text-anchor="middle" font-family="Arial" font-size="13" fill="#222"><tspan font-weight="bold">CU-27</tspan><tspan x="695.0" dy="18">Consultar estados de validación</tspan></text>
+</svg>

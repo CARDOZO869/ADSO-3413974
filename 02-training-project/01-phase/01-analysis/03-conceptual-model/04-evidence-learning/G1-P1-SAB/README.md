@@ -18,20 +18,16 @@
 
 - Caracterización del proyecto y comparación de Scrum, RUP y XP con criterios del SAB.
 - Selección justificada de Scrum y plan individual de ocho actividades con responsables, fechas y entregables.
-- Matriz de trazabilidad inicial para los 100 RF del SRS v2.3; los RF nuevos quedan identificados para revisión contra criterios y flujos del documento fuente.
-- Diagrama de casos de uso actualizado con CU-30, exportado a SVG y con fuente editable DOT coherente.
-- Relaciones UML justificadas y decisiones pendientes señaladas como pendientes.
+- Matriz de trazabilidad con RF, caso(s) de uso, actor(es) y cobertura documental; los RF-SAB-095 a RF-SAB-100 quedan señalados para revisar sus criterios de aceptación.
+- Diagrama UML dividido en cinco vistas sencillas, editable en Draw.io y exportado por separado a SVG. Registro de asistencia y gestión de clase aparecen en páginas distintas para facilitar la lectura.
+- La vista de asistencia muestra las relaciones `include` de CU-08 con CU-06 y CU-07. La relación `extend` de CU-09 con CU-06 se conserva descrita en el SRS, porque sus casos aparecen en páginas distintas. CU-28 conserva el actor «Admin autorizado» porque así figura en el SRS; queda señalado para validar su equivalencia con los roles institucionales.
 
 ## Archivos
 
 - [Plan, caracterización y matriz](./01-plan-analisis-y-casos-de-uso.md)
-- [Diagrama editable DOT](./04_diagrama_casos_uso.dot)
-- [Fuente Mermaid histórica](./diagrama-casos-de-uso.mmd) (no usar como diagrama vigente; se conserva como antecedente de otro modelo).
-- [Diagrama SVG](./04_diagrama_casos_uso.svg)
-
-## Uso de IA
-
-Se utilizó asistencia de IA para organizar el borrador y generar una primera propuesta de trazabilidad y diagrama. El aprendiz debe revisar cada vínculo contra el SRS y el tablero, corregir lo que no coincida y poder explicar las decisiones UML antes de publicar.
+- [Diagrama editable Draw.io](./04_diagrama_casos_uso.drawio)
+- Vistas SVG: [01 Acceso y cuentas](./04_diagrama_casos_uso.svg) · [02 Registro de asistencia](./04_diagrama_casos_uso_02.svg) · [03 Gestión de clase](./04_diagrama_casos_uso_03.svg) · [04 Consultas y excusas](./04_diagrama_casos_uso_04.svg) · [05 Administración](./04_diagrama_casos_uso_05.svg)
+- [Diagrama Mermaid anterior](./diagrama-casos-de-uso.mmd) (antecedente; no es la fuente vigente).
 
 ## Declaración de autoría
 
