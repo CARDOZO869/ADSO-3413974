@@ -25,9 +25,8 @@
 ## Archivos
 
 - [Plan, caracterización y matriz](./01-plan-analisis-y-casos-de-uso.md)
-- [Diagrama editable DOT](./04_diagrama_casos_uso.dot)
-- [Fuente Mermaid histórica](./diagrama-casos-de-uso.mmd) (no usar como diagrama vigente; se conserva como antecedente de otro modelo).
-- [Diagrama SVG](./04_diagrama_casos_uso.svg)
+- [Diagrama editable draw.io](./SAB_Casos_de_uso.drawio)
+- [Diagrama imagen](./SAB_Casos_de_uso.jpg)
 
 ## Declaración de autoría
 
@@ -35,7 +34,5 @@ Declaro que revisaré, ajustaré y explicaré personalmente los artefactos de es
 
 ## Control de publicación
 
-Completar al publicar: incluir enlaces a commits reales de cambios sustantivos en al menos dos días distintos, dentro de la ventana indicada por la guía. No inventar fechas ni enlaces.
-
-- Commit de avance: `PENDIENTE DE PUBLICAR`.
-- Commit de revisión: `PENDIENTE DE PUBLICAR`.
+- Commit de avance (2026-11-26): `https://github.com/CARDOZO869/ADSO-3413974/commit/df30fe4`
+- Commit de revisión (2026-11-27): `https://github.com/CARDOZO869/ADSO-3413974/commit/c316e91`
