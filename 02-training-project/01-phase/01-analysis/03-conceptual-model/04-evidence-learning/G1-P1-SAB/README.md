@@ -18,16 +18,16 @@
 
 - Caracterización del proyecto y comparación de Scrum, RUP y XP con criterios del SAB.
 - Selección justificada de Scrum y plan individual de ocho actividades con responsables, fechas y entregables.
-- Matriz de trazabilidad inicial para los 100 RF del SRS v2.3; los RF nuevos quedan identificados para revisión contra criterios y flujos del documento fuente.
-- Diagrama de casos de uso actualizado con CU-30, exportado a SVG y con fuente editable DOT coherente.
-- Relaciones UML justificadas y decisiones pendientes señaladas como pendientes.
+- Matriz de trazabilidad con RF, caso(s) de uso, actor(es) y cobertura documental; los RF-SAB-095 a RF-SAB-100 quedan señalados para revisar sus criterios de aceptación.
+- Diagrama UML organizado por actores, editable en Draw.io y exportado a SVG.
+- Relaciones `include` y `extend` justificadas. El actor «Admin autorizado» indicado en CU-28 queda señalado para validar su equivalencia con los roles institucionales.
 
 ## Archivos
 
 - [Plan, caracterización y matriz](./01-plan-analisis-y-casos-de-uso.md)
-- [Diagrama editable DOT](./04_diagrama_casos_uso.dot)
-- [Fuente Mermaid histórica](./diagrama-casos-de-uso.mmd) (no usar como diagrama vigente; se conserva como antecedente de otro modelo).
+- [Diagrama editable Draw.io](./04_diagrama_casos_uso.drawio)
 - [Diagrama SVG](./04_diagrama_casos_uso.svg)
+- [Diagrama Mermaid anterior](./diagrama-casos-de-uso.mmd) (antecedente; no es la fuente vigente).
 
 ## Declaración de autoría
 
