@@ -25,8 +25,13 @@
 ## Archivos
 
 - [Plan, caracterización y matriz](./01-plan-analisis-y-casos-de-uso.md)
-- [Diagrama editable draw.io](./SAB_Casos_de_uso.drawio)
-- [Diagrama imagen](./SAB_Casos_de_uso.jpg)
+- [Diagrama editable draw.io](./01_Aprendiz.drawio)
+- [Diagrama imagen](./01_Aprendiz.png)
+- [Diagrama editable draw.io](./02_Admin.drawio)
+- [Diagrama imagen](./02_Admin.png)
+-[Diagrama editable draw.io](./03_Superadmin.drawio)
+-[Diagrama imagen](./03_Superadmin.png) 
+
 
 ## Declaración de autoría
 
