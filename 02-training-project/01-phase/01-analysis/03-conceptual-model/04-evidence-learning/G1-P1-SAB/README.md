@@ -29,8 +29,8 @@
 - [Diagrama imagen](./01_Aprendiz.png)
 - [Diagrama editable draw.io](./02_Admin.drawio)
 - [Diagrama imagen](./02_Admin.png)
--[Diagrama editable draw.io](./03_Superadmin.drawio)
--[Diagrama imagen](./03_Superadmin.png) 
+- [Diagrama editable draw.io](./03_Superadmin.drawio)
+- [Diagrama imagen](./03_Superadmin.png) 
 
 
 ## Declaración de autoría
