@@ -61,7 +61,7 @@ Firma: `CARDOZO869` · 27/11/2026
 
 | Herramienta | Para qué la usé | Qué debo verificar/corregir personalmente |
 |---|---|---|
-| ChatGPT | Apoyo de redacion de plantillas, modelos, matriz y estructura de informe, señalizacion de pantallas exportadas desde Google.studio( mockup funcional) y validación cruzada de consistencia contra Rubricas_G1.md | Comparar cada vínculo con el SRS v2.3, confirmar roles y cardinalidades, revisar el mockup vigente y cerrar los hallazgos pendientes. |
+| ChatGPT | Apoyo de redacion de plantillas, modelos, matriz y estructura de informe, señalizacion de pantallas exportadas desde Google.studio( mockup funcional) y validación cruzada de consistencia contra las Rubricas | Comparar cada vínculo con el SRS v2.3, confirmar roles y cardinalidades, revisar el mockup vigente y cerrar los hallazgos pendientes. |
 
 ## 8. Autocontrol antes del push
 
