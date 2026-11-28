@@ -26,11 +26,11 @@
 
 - [Plan, caracterización y matriz](./01-plan-analisis-y-casos-de-uso.md)
 - [Diagrama editable draw.io](./01_Aprendiz.drawio)
-- [Diagrama imagen](./01_Aprendiz.png)
+- [Diagrama Aprendiz](./01_Aprendiz.png)
 - [Diagrama editable draw.io](./02_Admin.drawio)
-- [Diagrama imagen](./02_Admin.png)
+- [Diagrama Admin](./02_Admin.png)
 - [Diagrama editable draw.io](./03_Superadmin.drawio)
-- [Diagrama imagen](./03_Superadmin.png) 
+- [Diagrama Superadmin](./03_Superadmin.png) 
 
 
 ## Declaración de autoría
