@@ -1,0 +1,7 @@
+VALIDACIÓN LOCAL DEL SCRIPT
+Motor: SQLite 3.53.1 (prueba académica del DDL)
+Resultado: ejecución sin errores.
+Tablas creadas: 15
+ambiente, asistencia, auditoria, credencial_identidad, excusa, ficha, horario, inscripcion, notificacion, novedad, programa, rol, sede, sesion, usuario
+Verificaciones: [] (sin errores)
+Nota: esta evidencia comprueba sintaxis y restricciones con SQLite; no es una captura de MySQL ni certifica despliegue productivo.

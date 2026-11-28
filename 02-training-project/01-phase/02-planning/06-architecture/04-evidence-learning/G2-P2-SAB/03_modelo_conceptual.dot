@@ -1,0 +1,37 @@
+digraph SAB {
+graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.55", ranksep="0.85", splines=polyline, fontname="Arial", labelloc=t, fontsize=20, label="Modelo conceptual · SAB"];
+node [shape=plain, fontname="Arial"];
+edge [fontname="Arial", fontsize=9, color="#596579", arrowsize=0.7];
+"SEDE" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#DCE9FF"><B>SEDE</B></TD></TR><TR><TD ALIGN="LEFT">id_sede</TD></TR><TR><TD ALIGN="LEFT">nombre</TD></TR><TR><TD ALIGN="LEFT">ciudad</TD></TR><TR><TD ALIGN="LEFT">estado</TD></TR></TABLE>>];
+"PROGRAMA" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#DCE9FF"><B>PROGRAMA</B></TD></TR><TR><TD ALIGN="LEFT">id_programa</TD></TR><TR><TD ALIGN="LEFT">código</TD></TR><TR><TD ALIGN="LEFT">nombre</TD></TR><TR><TD ALIGN="LEFT">activo</TD></TR></TABLE>>];
+"FICHA" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#DCE9FF"><B>FICHA</B></TD></TR><TR><TD ALIGN="LEFT">id_ficha</TD></TR><TR><TD ALIGN="LEFT">código</TD></TR><TR><TD ALIGN="LEFT">jornada</TD></TR><TR><TD ALIGN="LEFT">estado</TD></TR></TABLE>>];
+"ROL" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#DCE9FF"><B>ROL</B></TD></TR><TR><TD ALIGN="LEFT">id_rol</TD></TR><TR><TD ALIGN="LEFT">código</TD></TR><TR><TD ALIGN="LEFT">descripción</TD></TR></TABLE>>];
+"USUARIO" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#DCE9FF"><B>USUARIO</B></TD></TR><TR><TD ALIGN="LEFT">id_usuario</TD></TR><TR><TD ALIGN="LEFT">documento</TD></TR><TR><TD ALIGN="LEFT">nombres</TD></TR><TR><TD ALIGN="LEFT">apellidos</TD></TR><TR><TD ALIGN="LEFT">correo</TD></TR><TR><TD ALIGN="LEFT">estado</TD></TR></TABLE>>];
+"INSCRIPCIÓN" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#F3E8FF"><B>INSCRIPCIÓN</B></TD></TR><TR><TD ALIGN="LEFT">fecha_inicio</TD></TR><TR><TD ALIGN="LEFT">fecha_fin</TD></TR><TR><TD ALIGN="LEFT">estado</TD></TR></TABLE>>];
+"AMBIENTE" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#F3E8FF"><B>AMBIENTE</B></TD></TR><TR><TD ALIGN="LEFT">id_ambiente</TD></TR><TR><TD ALIGN="LEFT">código</TD></TR><TR><TD ALIGN="LEFT">nombre</TD></TR><TR><TD ALIGN="LEFT">capacidad</TD></TR></TABLE>>];
+"HORARIO" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#DCFCE7"><B>HORARIO</B></TD></TR><TR><TD ALIGN="LEFT">id_horario</TD></TR><TR><TD ALIGN="LEFT">día y horas</TD></TR><TR><TD ALIGN="LEFT">vigencia</TD></TR></TABLE>>];
+"SESIÓN" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#DCFCE7"><B>SESIÓN</B></TD></TR><TR><TD ALIGN="LEFT">id_sesión</TD></TR><TR><TD ALIGN="LEFT">fecha</TD></TR><TR><TD ALIGN="LEFT">estado</TD></TR><TR><TD ALIGN="LEFT">vencimiento de código</TD></TR></TABLE>>];
+"CREDENCIAL" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#F3E8FF"><B>CREDENCIAL</B></TD></TR><TR><TD ALIGN="LEFT">id_credencial</TD></TR><TR><TD ALIGN="LEFT">modalidad</TD></TR><TR><TD ALIGN="LEFT">estado</TD></TR><TR><TD ALIGN="LEFT">autorización</TD></TR></TABLE>>];
+"ASISTENCIA" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#DCFCE7"><B>ASISTENCIA</B></TD></TR><TR><TD ALIGN="LEFT">id_asistencia</TD></TR><TR><TD ALIGN="LEFT">fecha_hora</TD></TR><TR><TD ALIGN="LEFT">estado</TD></TR><TR><TD ALIGN="LEFT">método</TD></TR></TABLE>>];
+"EXCUSA" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#F3E8FF"><B>EXCUSA</B></TD></TR><TR><TD ALIGN="LEFT">id_excusa</TD></TR><TR><TD ALIGN="LEFT">motivo</TD></TR><TR><TD ALIGN="LEFT">estado</TD></TR><TR><TD ALIGN="LEFT">fecha_envío</TD></TR></TABLE>>];
+"NOVEDAD" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#F3E8FF"><B>NOVEDAD</B></TD></TR><TR><TD ALIGN="LEFT">id_novedad</TD></TR><TR><TD ALIGN="LEFT">título</TD></TR><TR><TD ALIGN="LEFT">contenido</TD></TR><TR><TD ALIGN="LEFT">publicación</TD></TR></TABLE>>];
+"NOTIFICACIÓN" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#F3E8FF"><B>NOTIFICACIÓN</B></TD></TR><TR><TD ALIGN="LEFT">id_notificación</TD></TR><TR><TD ALIGN="LEFT">tipo</TD></TR><TR><TD ALIGN="LEFT">fecha</TD></TR><TR><TD ALIGN="LEFT">lectura</TD></TR></TABLE>>];
+"AUDITORÍA" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#3157A4"><TR><TD BGCOLOR="#F3E8FF"><B>AUDITORÍA</B></TD></TR><TR><TD ALIGN="LEFT">id_evento</TD></TR><TR><TD ALIGN="LEFT">acción</TD></TR><TR><TD ALIGN="LEFT">fecha_hora</TD></TR><TR><TD ALIGN="LEFT">detalle</TD></TR></TABLE>>];
+"SEDE" -> "PROGRAMA" [dir=both, arrowtail=none, arrowhead=vee, label="ofrece 0..*"];
+"PROGRAMA" -> "FICHA" [dir=both, arrowtail=none, arrowhead=vee, label="organiza 0..*"];
+"ROL" -> "USUARIO" [dir=both, arrowtail=none, arrowhead=vee, label="asigna 0..*"];
+"USUARIO" -> "INSCRIPCIÓN" [dir=both, arrowtail=none, arrowhead=vee, label="registra 0..*"];
+"FICHA" -> "INSCRIPCIÓN" [dir=both, arrowtail=none, arrowhead=vee, label="incluye 0..*"];
+"FICHA" -> "HORARIO" [dir=both, arrowtail=none, arrowhead=vee, label="programa 0..*"];
+"USUARIO" -> "HORARIO" [dir=both, arrowtail=none, arrowhead=vee, label="imparte 0..*"];
+"AMBIENTE" -> "HORARIO" [dir=both, arrowtail=none, arrowhead=vee, label="recibe 0..*"];
+"HORARIO" -> "SESIÓN" [dir=both, arrowtail=none, arrowhead=vee, label="origina 0..*"];
+"USUARIO" -> "CREDENCIAL" [dir=both, arrowtail=none, arrowhead=vee, label="posee 0..*"];
+"SESIÓN" -> "ASISTENCIA" [dir=both, arrowtail=none, arrowhead=vee, label="recibe 0..*"];
+"USUARIO" -> "ASISTENCIA" [dir=both, arrowtail=none, arrowhead=vee, label="marca 0..*"];
+"ASISTENCIA" -> "EXCUSA" [dir=both, arrowtail=none, arrowhead=vee, label="puede justificar 0..1"];
+"SEDE" -> "NOVEDAD" [dir=both, arrowtail=none, arrowhead=vee, label="publica 0..*"];
+"NOVEDAD" -> "NOTIFICACIÓN" [dir=both, arrowtail=none, arrowhead=vee, label="origina 0..*"];
+"USUARIO" -> "NOTIFICACIÓN" [dir=both, arrowtail=none, arrowhead=vee, label="recibe 0..*"];
+"USUARIO" -> "AUDITORÍA" [dir=both, arrowtail=none, arrowhead=vee, label="realiza 0..*"];
+}
