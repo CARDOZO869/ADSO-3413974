@@ -1,0 +1,8 @@
+digraph G {rankdir=LR; graph [bgcolor="white",pad="0.3",label="Despliegue SAB",labelloc=t,fontsize=20]; node [shape=box3d,style=filled,fontname=Arial,fontsize=11,margin="0.2,0.12"]; edge [fontname=Arial,fontsize=10,penwidth=1.5]; Client [label="Nodo cliente
+Browser / PWA
+Cámara o autenticador",fillcolor="#eaf2ff"]; App [label="Servidor de aplicación
+API SAB
+Servicios modulares",fillcolor="#e7fff1"]; Data [label="Servidor de datos
+BD relacional
+Backup cifrado",fillcolor="#fff4e8"]; Client->App[label="HTTPS 443 · TLS"]; App->Data[label="SQL TCP privado
+3306/5432 según motor"]; }

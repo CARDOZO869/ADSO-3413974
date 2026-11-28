@@ -1,0 +1,7 @@
+digraph G {rankdir=LR; graph [bgcolor="white",pad="0.3",label="Componentes e interfaces SAB",labelloc=t,fontsize=20]; node [shape=component,style=filled,fontname=Arial,fontsize=10,fillcolor="#eef5ff",color="#2457c5"]; edge [fontname=Arial,fontsize=9,style=dashed]; Web [label="Web
+IWebUI"]; Auth [label="Seguridad
+IAuthAPI / IAuthorization",fillcolor="#ffe9e9"]; Acad [label="Sesiones académicas
+ISessionAPI",fillcolor="#e7fff1"]; Asis [label="Asistencia
+IAttendanceAPI / IVerifier",fillcolor="#fff1df"]; News [label="Excusas y avisos
+INewsAPI",fillcolor="#f3e8ff"]; DB [label="Persistencia
+I*Repository",shape=box3d]; Web->Auth[label="IAuthAPI"]; Web->Acad[label="ISessionAPI"]; Web->Asis[label="IAttendanceAPI"]; Web->News[label="INewsAPI"]; Auth->DB[label="IUserRepository"]; Acad->DB[label="ISessionRepository"]; Asis->DB[label="IAttendanceRepository"]; News->DB[label="INewsRepository"]; }
