@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1550" viewBox="0 0 1780 1550">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0,0 L0,8 L11,4 z" fill="#506079"/></marker></defs>
+<rect width="1780" height="1550" fill="#FFFFFF"/>
+<text x="48" y="52" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#172033">Diagrama de actividades UML — CU-05: Abrir sesión</text>
+<text x="48" y="91" font-family="Arial,sans-serif" font-size="14" fill="#506079">G1-P2 · Carriles por actor · Decisiones con guardas · Ruta alterna QR / código y excepción de validación</text>
+<path d="M48 112 H1732" stroke="#172033" stroke-width="3"/>
+<rect x="48" y="140" width="670" height="1360" fill="#F5F8FF" stroke="#2453D4" stroke-width="3"/>
+<rect x="48" y="140" width="670" height="58" fill="#2453D4"/>
+<text x="383.0" y="177" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="white">Instructor</text>
+<rect x="718" y="140" width="1014" height="1360" fill="#F4FBF9" stroke="#117C72" stroke-width="3"/>
+<rect x="718" y="140" width="1014" height="58" fill="#117C72"/>
+<text x="1225.0" y="177" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="white">Sistema SAB</text>
+<path d="M 379.0 234.0 L 379 275 L 380.0 341.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 380.0 341.0 L 650 341 L 790 341 L 1070.0 341.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 1070.0 341.0 L 1070 385 L 1070 471 L 650 471 L 380.0 471.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 380.0 471.0 L 650 471 L 790 471 L 1070.0 471.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 1070.0 471.0 L 1070 535 L 1075.0 620.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 1075.0 620.0 L 1210 620 L 1280 620 L 1475.0 621.0" fill="none" stroke="#C92A2A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1157.5" y="603" width="245" height="28" rx="6" fill="white" stroke="#C92A2A" stroke-width="1.5"/>
+<text x="1280" y="622" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#C92A2A">[No: dato inválido o cruce]</text>
+<path d="M 1475.0 621.0 L 1475 700 L 1473.0 775.0" fill="none" stroke="#C92A2A" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 1075.0 620.0 L 1070 735 L 1070.0 814.0" fill="none" stroke="#13844A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="956.5" y="718" width="227" height="28" rx="6" fill="white" stroke="#13844A" stroke-width="1.5"/>
+<text x="1070" y="737" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#13844A">[Sí: asignación válida]</text>
+<path d="M 1070.0 814.0 L 790 814 L 650 814 L 650 941 L 380.0 941.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 380.0 941.0 L 385 1010 L 385.0 1086.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 385.0 1086.0 L 500 1086 L 680 1086 L 680 1231 L 790 1231 L 1030.0 1231.0" fill="none" stroke="#13844A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="651.0" y="1214" width="58" height="28" rx="6" fill="white" stroke="#13844A" stroke-width="1.5"/>
+<text x="680" y="1233" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#13844A">[QR]</text>
+<path d="M 385.0 1086.0 L 500 1086 L 720 1086 L 720 1150 L 1455 1150 L 1455.0 1231.0" fill="none" stroke="#7B36C8" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="642.5" y="1133" width="155" height="28" rx="6" fill="white" stroke="#7B36C8" stroke-width="1.5"/>
+<text x="720" y="1152" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#7B36C8">[Código manual]</text>
+<path d="M 1030.0 1231.0 L 1030 1285 L 1030 1300 L 1160.0 1361.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 1455.0 1231.0 L 1455 1280 L 1455 1361 L 1380 1361 L 1160.0 1361.0" fill="none" stroke="#506079" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 1160.0 1361.0 L 1160 1410 L 1160.0 1447.0" fill="none" stroke="#13844A" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="379.0" cy="234.0" r="13" fill="#172033"/>
+<rect x="190" y="300" width="380" height="82" rx="16" fill="#F0F5FF" stroke="#2453D4" stroke-width="3"/>
+<text x="380.0" y="336.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Seleccionar ficha y horario</text>
+<text x="380.0" y="355.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">asignados</text>
+<rect x="870" y="300" width="400" height="82" rx="16" fill="#EFFBF8" stroke="#117C72" stroke-width="3"/>
+<text x="1070.0" y="346.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Mostrar ficha, horario y ambiente</text>
+<rect x="190" y="430" width="380" height="82" rx="16" fill="#F0F5FF" stroke="#2453D4" stroke-width="3"/>
+<text x="380.0" y="476.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Confirmar apertura de la sesión</text>
+<rect x="870" y="430" width="400" height="82" rx="16" fill="#EFFBF8" stroke="#117C72" stroke-width="3"/>
+<text x="1070.0" y="466.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Validar asignación, vigencia y</text>
+<text x="1070.0" y="485.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">cruces</text>
+<polygon points="1075.0,560 1155,620.0 1075.0,680 995,620.0" fill="#FFF8D8" stroke="#C4610B" stroke-width="3"/>
+<text x="1075.0" y="615.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="#172033">¿Los datos son válidos</text>
+<text x="1075.0" y="634.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="#172033">y no hay cruce?</text>
+<rect x="1300" y="580" width="350" height="82" rx="16" fill="#FFF0F0" stroke="#C92A2A" stroke-width="3"/>
+<text x="1475.0" y="616.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Informar el motivo y no abrir</text>
+<text x="1475.0" y="635.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">sesión</text>
+<circle cx="1473.0" cy="775.0" r="15" fill="white" stroke="#172033" stroke-width="4"/>
+<circle cx="1473.0" cy="775.0" r="9" fill="#172033"/>
+<rect x="850" y="770" width="440" height="88" rx="16" fill="#EFFBF8" stroke="#117C72" stroke-width="3"/>
+<text x="1070.0" y="809.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Crear sesión activa y registrar hora</text>
+<text x="1070.0" y="828.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">del servidor</text>
+<rect x="190" y="900" width="380" height="82" rx="16" fill="#F0F5FF" stroke="#2453D4" stroke-width="3"/>
+<text x="380.0" y="946.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Elegir QR o código manual</text>
+<polygon points="385.0,1030 460,1086.0 385.0,1142 310,1086.0" fill="#FFF8D8" stroke="#C4610B" stroke-width="3"/>
+<text x="385.0" y="1081.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="#172033">¿Qué medio se</text>
+<text x="385.0" y="1100.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="#172033">va a usar?</text>
+<rect x="845" y="1190" width="370" height="82" rx="16" fill="#E9FAEF" stroke="#13844A" stroke-width="3"/>
+<text x="1030.0" y="1226.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Generar QR temporal para la</text>
+<text x="1030.0" y="1245.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">sesión</text>
+<rect x="1260" y="1190" width="390" height="82" rx="16" fill="#F5EEFF" stroke="#7B36C8" stroke-width="3"/>
+<text x="1455.0" y="1226.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Generar código temporal para la</text>
+<text x="1455.0" y="1245.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">sesión</text>
+<rect x="940" y="1320" width="440" height="82" rx="16" fill="#E9FAEF" stroke="#13844A" stroke-width="3"/>
+<text x="1160.0" y="1356.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">Mostrar medio y vigencia; sesión</text>
+<text x="1160.0" y="1375.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#172033">lista</text>
+<circle cx="1160.0" cy="1447.0" r="15" fill="white" stroke="#172033" stroke-width="4"/>
+<circle cx="1160.0" cy="1447.0" r="9" fill="#172033"/>
+</svg>

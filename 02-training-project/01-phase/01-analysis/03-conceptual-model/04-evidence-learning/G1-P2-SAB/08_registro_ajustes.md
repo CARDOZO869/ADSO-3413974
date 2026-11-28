@@ -1,0 +1,11 @@
+# Registro de ajustes y segunda verificación
+
+| # | Hallazgo | Artefacto | Antes | Después / corrección | Commit | Segunda verificación |
+|---:|---|---|---|---|---|---|
+| H-01 | Las ramas negativas de las decisiones no terminaban en un estado final visible. | Diagramas de actividades | Boceto con decisión y solo ruta principal. | Se añadieron guardas `[Sí]`/`[No]`, aviso de rechazo y final explícito en los archivos `.drawio` y SVG. | Pendiente de commit de revisión. | Sí: se comprobó la lectura de las exportaciones SVG y la validez XML de los fuentes Draw.io. |
+| H-02 | La matriz debe comprobar RF→CU del SRS y reflejar las pantallas del mockup vigente. | Matriz y prototipo | El fork conserva enlaces a mockups anteriores; el prototipo inicial es propio de esta carpeta. | Se mapearon 100 RF a CU, dominio y MER. Se conservaron todos los CU relacionados por RF, no solo el primero. Las clases y entidades se ampliaron para horarios, cuentas, roles, competencias, notificaciones y novedades; falta validar cada asignación con el SRS y cotejar las pantallas con el mockup vigente. | Pendiente de commit de revisión. | Parcial: 100 IDs y CU múltiples revisados; enlaces a clase/entidad y mockup aún por cotejar. |
+| H-03 | El informe debe resumir resultados tras verificar las correcciones. | Informe y lista | Se registraron pendientes, sin declarar cumplimiento total. | Se actualizó el informe y la lista con la segunda verificación de H-01 y el estado parcial de H-02. | Pendiente de commit de revisión. | Sí: ambos archivos reflejan el mismo estado. |
+| H-04 | Plantilla de caso CU-06 debe distinguir fallo técnico de fallo de identidad. | CU-06 | Riesgo de contar fallo técnico como intento de identidad. | El flujo ahora indica que el fallo técnico no incrementa los intentos, conforme a RN-005. | Pendiente de commit de revisión. | Sí, revisado en CU-06. |
+| H-05 | El MER debe representar la relación Aprendiz–Ficha sin texto libre y conservar historial. | MER | La ficha podría interpretarse como texto simple del perfil. | Se añadió VINCULACION_FICHA con fechas y estado como entidad asociativa. | Pendiente de commit de revisión. | Sí, revisado en la tabla de relaciones del MER. |
+
+> Los enlaces a commits reales se deben completar después del push. H-02 sigue parcialmente pendiente hasta cotejar el mockup vigente.
